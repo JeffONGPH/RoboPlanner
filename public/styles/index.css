@@ -1,0 +1,69 @@
+body {
+   background-image: url("background.png");
+}
+
+.jumbotron{
+   margin-top: 22%;
+   background: linear-gradient(rgba(0, 255, 255, 0.3), turquoise);
+   opacity: 0.6;
+}
+
+.jumbo_text{
+   color:wheat;
+   font-weight: 400;
+   size: 60%;
+   opacity: 1;
+  
+}
+
+h1{
+   font-size: 420%;
+   -webkit-text-stroke: 0.1px #FD5F00;
+   font-family:'Monoton', cursive;
+}
+p{
+   color:black;
+   font-weight: bold;
+   font-family: 'Bungee Inline', cursive;
+}
+
+.btn{
+   background-color:#008CBA;
+   font-family: 'Bungee Inline', cursive;
+   color: wheat;
+   border: #FD5F00;
+   
+}
+
+.btn:hover{
+   background-color:#FD5F00;
+   
+}
+
+.modal-content{
+   color: white;
+   border: 3px white;
+   font-family: 'Bungee Inline', cursive;
+   background-color: black;
+}
+
+.close{
+   color:white;
+}
+
+.close:hover{
+   color:orange;
+}
+
+.form{
+   margin: auto auto; 
+   width:33%;
+}
+
+input{
+   width: 100%;
+}
+
+.center{
+   text-align: center;
+}

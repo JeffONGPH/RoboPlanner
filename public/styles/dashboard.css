@@ -1,0 +1,110 @@
+body {
+    background-image: url("background.png");
+ }
+
+table{
+     background: linear-gradient(rgba(0, 255, 255, 0.3), turquoise);
+     opacity: 0.6;
+     color:whitesmoke;
+     font-family:'Bungee Inline', cursive;
+ }
+ .table-text{
+    color:white;
+    font-weight: 200;
+    opacity: 1;
+    font-family: 'Bungee Inline', cursive;   
+ }
+
+ #tables-container{
+    margin-top: 5%;
+ }
+
+ h5{
+    font-family:'Bungee Inline', cursive;
+    font-weight: 400;
+    size: 60%;
+    color:white;
+    -webkit-text-stroke: 1px #FD5F00;
+
+ }
+
+ button{
+    display: block;
+    float: left;
+    margin: 0 auto;
+    font-family: 'Bungee Inline', cursive;
+ }
+
+ .btn{
+    background-color:#008CBA;
+    font-family: 'Bungee Inline', cursive;
+    color: wheat;
+    border: #FD5F00;   
+}
+
+ #addtaskbutton{
+    float:none;
+    height:100%; 
+    width:100%;
+    font-family: 'Bungee Inline', cursive;
+    color: wheat;
+    background-color:#008CBA;
+    border: none;
+    font-size:250%;
+    border: solid 2px turquoise;
+    opacity:0.8;
+ }
+
+ #addtaskbutton:hover{
+     background-color:#FD5F00;
+ }
+
+ h1{
+     font-size: 600%;
+     -webkit-text-stroke: 0.1px #FD5F00;
+     font-family:'Monoton', cursive;
+     color:wheat;
+ }
+ p{
+     color:black;
+     font-weight: bold;
+     font-family: 'Bungee Inline', cursive;
+ }
+
+ .btn:hover{
+     background-color:#FD5F00;   
+ }
+
+ .modal-content{
+     color: white;
+     border: 3px white;
+     font-family: 'Bungee Inline', cursive;
+     background-color: black;
+ }
+
+ .close{
+     color:white;
+ }
+
+ .close:hover{
+     color:orange;
+ }
+
+ .smstop {
+     width: 80%
+ }
+
+ .row{
+     margin: 0 auto;
+     display:flex;
+     justify-content: center;
+ }
+
+ .bottom{
+     margin-left:2%;
+ }
+
+ .tabletop{
+     background-color: rgba(224, 84, 224, 0.6);
+     color: black;
+ }

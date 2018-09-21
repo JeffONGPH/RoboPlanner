@@ -1,0 +1,221 @@
+<div class="container">
+    <!--title-->
+    <div class="row">
+        <div class="col-md-12" style="text-align:center">
+            <h1>Dashboard</h1>
+        </div>
+    </div>
+    <!--Profile pic and username-->
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{imgURL}}" class="rounded float-left dashPic">
+        </div>
+        <div class="col-md-8">
+            <h3>{{name}}</h3>
+        </div>
+    </div>
+</div>
+ <!--Recommended-->
+ <!--CONTAINER OF ALL TABLES-->
+ <div id="tables-container"></div>
+<div class="row">
+<div class="col-md-3" style="text-align:center">
+    <h5><strong></strong>ROBO Recommend</strong></h5>
+    <table class="table table-text">
+        <thead>
+            <tr class="tabletop">
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col" class="hide">Category</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each recom}}
+            <tr>
+                <td>{{this.count}}</td>
+                <td>{{this.name}}</td>
+                <td class="hide">{{this.category}}</td>
+                <td> 
+                    <button type="button" class="btn btn-primary sms smstop">SMS</button>
+                    </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<div class="col-md-4" style="text-align:center">
+    <h5><strong></strong>ROBO Completed</strong></h5>
+    <table class="table table-text">
+        <thead>
+            <tr  class="tabletop">
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col" class="hide">Category</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each recomd}}
+            <tr>
+                <td>{{this.count}}</td>
+                <td>{{this.name}}</td>
+                <td class="hide">{{this.category}}</td>
+                <td> 
+                    <button type="button" class="btn btn-primary smstop">SMS</button>
+                    </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<div class="col-md-3">  <button type="button" class="btn btn-primary center-block" data-toggle="modal" data-target="#exampleModal" id="addtaskbutton">
+            Add Task
+        </button></div>
+</div>
+{{!-- <!--add task and friend lookup-->
+<div class="row" style="text-align:center">
+    <div class="col-md-12">
+        <button type="button" class="btn btn-primary center-block" data-toggle="modal" data-target="#exampleModal" >
+            Add Task
+        </button>
+    </div>
+    </div> --}}
+     <!--BOTTTTTTOOM2-->
+<!--TOPPP2-->
+<!--recommended list-->
+<div class="row">
+    <div class="col-md-10" style="text-align:center">
+        <!--TABLE 1 -->
+        <h5><strong></strong>Upcoming</strong></h5>
+        <table class="table table-text">
+            <thead>
+                <tr class="tabletop">
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col" >Details</th>
+                    <th scope="col" >Location</th>
+                    <th scope="col" >Date</th>
+                    <th scope="col" class="hide" >Category</th>
+                    <th scope="col" class="hide" >Difficulty</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each todos}}
+                <tr>
+                    <td>{{this.count}}</td>
+                    <td>{{this.todo.name}}</td>
+                    <td  >{{this.todo.details}}</td>
+                    <td  > {{this.todo.location}}</td>
+                    <td >{{this.todo.deadline}}</td>
+                    <td class="hide" >{{this.todo.category}}</td>
+                    <td class="hide" >{{this.todo.difficulty}}</td>
+                    <td> 
+                        <button type="button" data-complete={{this.todo.completed}} data-id={{this.todo.id}} class="btn btn-success completed bottom">Completed</button>
+                        <button type="button" data-id={{this.todo.id}} class="btn btn-primary sms bottom">SMS</button>
+                        <button type="button" data-id={{this.todo.id}} class="btn btn-danger remove bottom">Remove</button></td>
+                </tr>
+                 {{/each}}
+            </tbody>
+        </table>
+    </div> 
+    </div><!--row-->
+    <div class="row">
+    <div class="col-md-10" style="text-align:center">
+        <h5><strong></strong>Completed </strong></h5>
+        <table class="table table-text">
+            <thead>
+                <tr class="tabletop">
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col"  >Details</th>
+                    <th scope="col" >Location</th>
+                    <th scope="col" >Date</th>
+                    <th scope="col" class="hide" >Category</th>
+                    <th scope="col" class="hide" >Difficulty</th>
+                    <th scope="col" >Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each todocoms}} 
+                <tr>
+                    <td>{{this.count}}</td>
+                    <td>{{this.todo.name}}</td>
+                    <td >{{this.todo.details}}</td>
+                    <td >{{this.todo.location}}</td>
+                    <td >{{this.todo.deadline}}</td>
+                    <td class="hide" >{{this.todo.category}}</td>
+                    <td class="hide" >{{this.todo.difficulty}}</td>
+                    <td> 
+                        <button type="button" data-complete={{this.todo.completed}} data-id={{this.todo.id}} class="btn btn-success completed bottom">Uncompleted</button>
+                        <button type="button" data-id={{this.todo.id}} class="btn btn-primary sms bottom">SMS</button>
+                        <button type="button" data-id={{this.todo.id}} class="btn btn-danger remove bottom">Remove</button></td>
+                </tr>
+             {{/each}}
+            </tbody>
+        </table>
+    </div>
+    </div>
+    </div> 
+    </div>
+    <!--POP UPS-->
+    <!--ADD TASK POP-UPS (MODALS)-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name" class="col-form-label">Name</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="details" class="col-form-label">Details</label>
+                            <textarea class="form-control" id="details"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="col-form-label">Location</label>
+                            <input type="text" class="form-control" id="location">
+                        </div>
+                        <div class="form-group">
+                            <label for="duration" class="col-form-label">Duration In Minutes</label>
+                            <input type="text" class="form-control" id="duration">
+                        </div>
+                        <div class="form-group">
+                            <label for="category" class="col-form-label">Category</label>
+                            <select id="category">
+                                <option value="Household">Household</option>
+                                <option value="Business">Business</option>
+                                <option value="Personal">Personal</option>
+                            </select>
+                        </div>
+                        <label for="difficulty" class="col-form-label">Difficulty</label>
+                        <select id="difficulty">
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="1">1 (Easy)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10 (Hard)</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" onclick="add_todo()" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
